@@ -1,0 +1,27 @@
+.loader {
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+
+  .spinner {
+    height: 10vh;
+    width: 10vh;
+    border: 6px solid $border_loader;
+    border-top-color: $blue;
+    border-radius: 100%;
+    animation: rotation 1s infinite linear 1s;
+    opacity: 0;
+  }
+
+  @keyframes rotation {
+    from {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(359deg);
+    }
+  }
+}
