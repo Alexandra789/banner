@@ -1,19 +1,286 @@
-.d{
-  font-family: "SF Pro Display",sans-serif;
-  font-weight: 600;
+body, a {
+  color: $white;
 }
 
-.t{
-  font-family: "SF Pro Text",sans-serif;
-  font-weight: 400;
-}
+.banner {
+  background-image: url("/src/assets/img/4@2x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
 
-.r{
-  font-family: "Roboto",sans-serif;
-  font-weight: 400;
-}
+  .header {
+    padding: 40px 20px 0;
+    margin-bottom: 153px;
 
-.jp{
-  font-family: "SF Pro JP",sans-serif;
-  font-weight: 600;
+    &__navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .close-btn {
+        background-image: url("/src/assets/img/close.svg");
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+        display: block;
+      }
+
+      .restore-btn {
+        font-family: 'SF Pro Text', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: -0.216667px;
+        text-decoration: none;
+        opacity: 0.6;
+        max-width: 250px;
+      }
+    }
+  }
+
+  .main {
+    &__title {
+      font-family: 'SF Pro Display', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 43px;
+      max-width: 286px;
+      text-align: center;
+      letter-spacing: -0.8px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      margin: 0 auto 29px;
+    }
+
+    .features-list {
+      max-width: 208.5px;
+      margin: 0 auto 45px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+
+        img {
+          max-height: 22px;
+          max-width: 26px;
+        }
+
+        &-title {
+          margin-left: 6px;
+          font-family: 'SF Pro Text', sans-serif;
+          font-size: 17px;
+          line-height: 30px;
+          letter-spacing: -0.321111px;
+          text-shadow: 0 0 4px rgba(0, 0, 0, 0.684495);
+        }
+      }
+    }
+
+
+    .plan {
+      max-width: 297px;
+      min-height: 181px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 0 3px;
+
+      &__item {
+        padding: 20px 8px 10px;
+        position: relative;
+        background-image: url("/src/assets/img/shape.svg");
+        transition: all 0.5s;
+
+        &:first-of-type {
+          margin-right: 13px;
+        }
+
+        &:first-of-type.active {
+          min-height: 178px;
+        }
+
+        &:last-of-type {
+          background-image: url("/src/assets/img/shape-inactive.svg");
+        }
+
+        &:last-of-type.active {
+          min-height: 181px;
+          background-image: url("/src/assets/img/shape-2.svg");
+        }
+      }
+
+      .card > * {
+        transition: all 0.3s;
+      }
+
+      .card {
+        opacity: 0.5;
+        max-width: 131px;
+        font-family: 'SF Pro Display', sans-serif;
+        min-height: 162px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
+        .sales {
+          background-color: #DB0000;
+          width: 30px;
+          font-size: 12px;
+          line-height: 14px;
+          height: 30px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        &__title {
+          font-size: 17px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+
+        &__price {
+          font-weight: 400;
+          max-width: 109px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          font-size: 12px;
+
+          span {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 22px;
+          }
+        }
+
+        &__description {
+          background-color: $dark_blue;
+          min-width: 137px;
+          text-align: center;
+          padding: 2px 0 1px;
+
+          &-text {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+
+        &__monthly-price {
+          font-size: 12px;
+          line-height: 14px;
+
+          span {
+            margin-right: 2px;
+          }
+        }
+      }
+
+      .plan__item.active {
+        max-width: 145px;
+        opacity: 1;
+
+        .sales {
+          width: 38px;
+          height: 38px;
+          font-size: 12px;
+          line-height: 14px;
+          right: -2px;
+          top: -2px;
+        }
+
+        .card {
+          &__title {
+            font-size: 18.7px;
+            line-height: 22px;
+          }
+
+          &__price {
+            font-size: 13px;
+
+            span {
+              font-size: 24px;
+            }
+          }
+
+          &__description {
+            min-width: 151px;
+
+            &-text {
+              font-size: 15.4px;
+              line-height: 19px;
+            }
+          }
+
+          &__monthly-price {
+            font-size: 13.2px;
+            line-height: 15px;
+          }
+        }
+      }
+    }
+
+    .continue-btn {
+      font-family: "SF Pro Display", sans-serif;
+      display: inline-block;
+      text-decoration: none;
+      font-size: 17px;
+      line-height: 15px;
+      text-align: center;
+      color: $white;
+      max-width: 280px;
+      width: 100%;
+      padding: 18px 8px 17px;
+      background: linear-gradient(270deg, $blue 0%, $light_blue 100%);
+      border-radius: 30px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .notification {
+      font-family: 'SF Pro Text', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 13px;
+      text-align: center;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      margin-bottom: 16px;
+    }
+  }
+
+  .footer {
+    &__section {
+      font-family: 'SF Pro Text', sans-serif;
+      max-width: 324px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-bottom: 27px;
+
+      a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-decoration-line: underline;
+        color: $gray;
+      }
+    }
+  }
 }

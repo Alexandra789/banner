@@ -6,6 +6,69 @@
     <title>Banner</title>
 </head>
 <body>
-
+    <div class="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="banner" style="display: none">
+        <header class="header">
+            <div class="container">
+                <nav class="header__navbar">
+                    <a href="#" class="close-btn"></a>
+                    <a href="#" class="restore-btn">Restore</a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main_section">
+                <div class="container">
+                    <h1 class="main__title">Unlimited Access to All Features</h1>
+                    <ul class="features-list">
+                        <li class="features-list__item">
+                            <img class="features-list__item-svg" src="/src/assets/img/unlimitedDocs.svg"
+                                 alt="feature svg">
+                            <p class="features-list__item-title">Unlimited documents</p>
+                        </li>
+                        <li class="features-list__item">
+                            <img class="features-list__item-svg" src="/src/assets/img/export.svg" alt="feature svg">
+                            <p class="features-list__item-title">Export to clouds</p>
+                        </li>
+                        <li class="features-list__item">
+                            <img class="features-list__item-svg" src="/src/assets/img/noAds.svg" alt="feature svg">
+                            <p class="features-list__item-title">Text recognition (OCR)</p>
+                        </li>
+                    </ul>
+                    <div class="plan">
+                        <div class="plan__item card active" id="monthly">
+                            <p class="card__title">Monthly</p>
+                            <p class="card__price"><span class="price">$9.99</span>per month</p>
+                            <div class="card__description">
+                                <p class="card__description-text">3 days free!</p>
+                            </div>
+                            <p class="card__monthly-price"><span class="price">$9.99</span>month</p>
+                        </div>
+                        <div class="plan__item card" id="annually">
+                            <div class="sales">-83%</div>
+                            <p class="card__title">Annually</p>
+                            <p class="card__price"><span class="price">$19.99</span>per month</p>
+                            <div class="card__description">
+                                <p class="card__description-text">Most popular</p>
+                            </div>
+                            <p class="card__monthly-price"><span class="price">$1.66</span>month</p>
+                        </div>
+                    </div>
+                    <a href="https://apple.com/" class="continue-btn btn">Continue</a>
+                    <p class="notification">Auto-renewable. Cancel anytime</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <section class="footer__section">
+                    <a href="#" class="terms-of-use-btn">Terms of Use</a>
+                    <a href="#" class="privacy-policy-btn">Privacy Policy</a>
+                </section>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
