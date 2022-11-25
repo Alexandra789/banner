@@ -129,7 +129,7 @@ export const translations = {
         "3 days free!": "3 ДНЯ БЕСПЛАТНО!",
         "<span>$9.99</span>month": "<span>$9.99</span>месяц",
         "<span>$1.66</span>month": "<span>$1.66</span>месяц",
-        "Annually": "1 ГОД",
+        "Annually": "1 год",
         "-83%": "-83%",
         "Most popular": "ПОПУЛЯРНОЕ",
         "Continue": "Продолжить",
