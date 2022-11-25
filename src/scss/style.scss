@@ -1,6 +1,9 @@
-body {
-  background-color: $background;
-}
+//body {
+//  background-color: $white;
+  //@media (min-width: 431px) {
+  //  background-color: $white !important;
+  //}
+//}
 
 body, a {
   color: $white;
@@ -12,20 +15,21 @@ body, a {
 
 .banner {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  //background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding-bottom: 38px;
   padding-top: 40px;
-  background-image: url("/src/assets/img/background.png");
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (-o-min-device-pixel-ratio: 3/2),
-  only screen and (min-device-pixel-ratio: 1.5),
-  only screen and (min--moz-device-pixel-ratio: 1.5),
-  only screen and (-o-min-device-pixel-ratio: 3/2),
-  only screen and (min-resolution: 1.5dppx),
-  only screen and (min-resolution: 144dpi) {
-    background-image: url("/src/assets/img/background@2x.png");
+  position: relative;
+  z-index: 2;
+  background-image: image-set("/src/assets/img/backgroundsz.png" 1x, "/src/assets/img/background@2xsz.png" 2x);
+  @media (min-width: 432px) {
+    background-size: contain;
   }
+  //@media (max-width: 431px) and (min-width: 376px) {
+  //  background-size: cover;
+  //}
 
   .header {
     padding: 0 4px;
@@ -39,11 +43,16 @@ body, a {
       align-items: center;
 
       .close-btn {
-        background-image: url("/src/assets/img/close.svg");
-        background-repeat: no-repeat;
+        //background-image: url("/src/assets/img/close.svg");
+        //background-repeat: no-repeat;
         height: 24px;
         width: 24px;
         display: block;
+        position: relative;
+
+        img {
+
+        }
       }
 
       .restore-btn {
