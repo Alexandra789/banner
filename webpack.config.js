@@ -12,9 +12,13 @@ module.exports = {
     target,
     devtool,
     devServer: {
-        port: 3000,
+        port: 8080,
         open: true,
         hot: true,
+        allowedHosts: ['all'],
+    },
+    experiments: {
+        topLevelAwait: true
     },
     entry: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
     output: {
@@ -90,6 +94,7 @@ module.exports = {
             },
             {
                 test: /\.m?js$/i,
+                type: "javascript/esm",
                 exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: 'babel-loader',
