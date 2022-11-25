@@ -1,19 +1,40 @@
+body {
+  background-color: $background;
+}
+
 body, a {
   color: $white;
 }
 
+.container {
+  padding: 0 16px;
+}
+
 .banner {
-  background-image: url("/src/assets/img/4@2x.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   text-align: center;
+  padding-bottom: 38px;
+  padding-top: 40px;
+  background-image: url("/src/assets/img/background.png");
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-resolution: 1.5dppx),
+  only screen and (min-resolution: 144dpi) {
+    background-image: url("/src/assets/img/background@2x.png");
+  }
 
   .header {
-    padding: 40px 20px 0;
+    padding: 0 4px;
     margin-bottom: 153px;
 
     &__navbar {
       display: flex;
+      max-width: 335px;
+      margin: 0 auto;
       justify-content: space-between;
       align-items: center;
 
@@ -26,7 +47,7 @@ body, a {
       }
 
       .restore-btn {
-        font-family: 'SF Pro Text', sans-serif;
+        font-family: 'SFProText', sans-serif;
         font-weight: 400;
         font-size: 13px;
         letter-spacing: -0.216667px;
@@ -39,24 +60,66 @@ body, a {
 
   .main {
     &__title {
-      font-family: 'SF Pro Display', sans-serif;
+      font-family: 'SFProDisplay', sans-serif;
       font-weight: 700;
-      font-size: 36px;
       line-height: 43px;
-      max-width: 286px;
+      max-width: 321px;
       text-align: center;
       letter-spacing: -0.8px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       margin: 0 auto 29px;
+      font-size: 36px;
+      //font-size: calc(22px + 14 * (100vw / 375));
+    }
+
+    &__title[data-translate="es"] {
+      @media (max-width: 356px) {
+        font-size: 32px;
+      }
+    }
+
+    &__title[data-translate="en"] {
+      @media (max-width: 356px) {
+        font-size: 34px;
+      }
+    }
+
+    &__title[data-translate="ru"] {
+      font-size: 24px;
+      line-height: 43px;
+    }
+
+    &__title[data-translate="fr"] {
+      font-size: 32px;
+      @media (max-width: 356px) {
+        font-size: 28px;
+      }
+    }
+
+    &__title[data-translate="nl"] {
+      font-size: 34px;
+      @media (max-width: 356px) {
+        font-size: 30px;
+      }
+    }
+
+    &__title[data-translate="zh"] {
+      max-width: 250px;
     }
 
     .features-list {
-      max-width: 208.5px;
+      max-width: 300px;
       margin: 0 auto 45px;
+      display: grid;
+      justify-content: center;
 
       &__item {
         display: flex;
         align-items: center;
+
+        .img-wrap {
+          width: 26px;
+        }
 
         img {
           max-height: 22px;
@@ -65,7 +128,7 @@ body, a {
 
         &-title {
           margin-left: 6px;
-          font-family: 'SF Pro Text', sans-serif;
+          font-family: 'SFProText', sans-serif;
           font-size: 17px;
           line-height: 30px;
           letter-spacing: -0.321111px;
@@ -87,7 +150,7 @@ body, a {
         padding: 20px 8px 10px;
         position: relative;
         background-image: url("/src/assets/img/shape.svg");
-        transition: all 0.5s;
+        transition: all 0.3s;
 
         &:first-of-type {
           margin-right: 13px;
@@ -114,7 +177,7 @@ body, a {
       .card {
         opacity: 0.5;
         max-width: 131px;
-        font-family: 'SF Pro Display', sans-serif;
+        font-family: 'SFProDisplay', sans-serif;
         min-height: 162px;
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -147,19 +210,19 @@ body, a {
         &__title {
           font-size: 17px;
           line-height: 20px;
-          font-weight: 600;
+          font-weight: 700;
+          max-width: 200px;
+          width: 100%;
         }
 
         &__price {
           font-weight: 400;
           max-width: 109px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+          display: inline-block;
           font-size: 12px;
 
           span {
-            font-style: normal;
+            display: block;
             font-weight: 700;
             font-size: 22px;
             line-height: 22px;
@@ -177,6 +240,18 @@ body, a {
             text-transform: uppercase;
             font-size: 14px;
             line-height: 17px;
+          }
+
+          &-text[data-translate="ru"] {
+            font-size: 10.6px;
+          }
+
+          &-text[data-translate="fr"] {
+            font-size: 10px;
+          }
+
+          &-text[data-translate="nl"] {
+            font-size: 12px;
           }
         }
 
@@ -224,6 +299,18 @@ body, a {
               font-size: 15.4px;
               line-height: 19px;
             }
+
+            &-text[data-translate="ru"] {
+              font-size: 12px;
+            }
+
+            &-text[data-translate="fr"] {
+              font-size: 11.4px;
+            }
+
+            &-text[data-translate="nl"] {
+              font-size: 13.4px;
+            }
           }
 
           &__monthly-price {
@@ -235,7 +322,7 @@ body, a {
     }
 
     .continue-btn {
-      font-family: "SF Pro Display", sans-serif;
+      font-family: "SFProDisplay", sans-serif;
       display: inline-block;
       text-decoration: none;
       font-size: 17px;
@@ -252,8 +339,7 @@ body, a {
     }
 
     .notification {
-      font-family: 'SF Pro Text', sans-serif;
-      font-style: normal;
+      font-family: 'SFProText', sans-serif;
       font-weight: 400;
       font-size: 11px;
       line-height: 13px;
@@ -266,18 +352,18 @@ body, a {
 
   .footer {
     &__section {
-      font-family: 'SF Pro Text', sans-serif;
+      font-family: 'SFProText', sans-serif;
       max-width: 324px;
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
-      padding-bottom: 27px;
+      padding: 0 2px;
 
       a {
-        font-style: normal;
         font-weight: 400;
         font-size: 11px;
         line-height: 13px;
+        max-width: 140px;
         text-decoration-line: underline;
         color: $gray;
       }
