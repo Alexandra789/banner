@@ -1,8 +1,9 @@
 .loader {
   display: flex;
-  height: 95vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
+  background-color: $white;
 
   .spinner {
     height: 10vh;
@@ -10,7 +11,12 @@
     border: 6px solid $border_loader;
     border-top-color: $blue;
     border-radius: 100%;
-    animation: rotation 1s infinite linear 1s;
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+    //animation: rotation 1s infinite linear 1s;
     opacity: 0;
   }
 
