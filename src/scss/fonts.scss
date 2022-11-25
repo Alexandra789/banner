@@ -2,26 +2,30 @@
   font-family: 'SFProDisplay';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+  src: url('assets/fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
+  url('assets/fonts/SF-Pro-Display-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'SFProDisplay';
   font-style: normal;
   font-weight: 900;
-  src: url('assets/fonts/SF-Pro-Display-Heavy.woff2') format('woff2');
+  src: url('assets/fonts/SF-Pro-Display-Heavy.woff2') format('woff2'),
+  url('assets/fonts/SF-Pro-Display-Heavy.woff') format('woff');
 }
 
 @font-face {
   font-family: 'SFProDisplay';
   font-style: normal;
   font-weight: 700;
-  src: url('assets/fonts/SF-Pro-Display-Bold.woff2') format('woff2');
+  src: url('assets/fonts/SF-Pro-Display-Bold.woff2') format('woff2'),
+  url('assets/fonts/SF-Pro-Display-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'SFProText';
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/SF-Pro-Text-Regular.woff2') format('woff2');
+  src: url('assets/fonts/SF-Pro-Text-Regular.woff2') format('woff2'),
+  url('assets/fonts/SF-Pro-Text-Regular.woff') format('woff');
 }
