@@ -22,6 +22,9 @@ body, a {
   position: relative;
   z-index: 2;
   background-image: url("/src/assets/img/background@2xcomp.jpg");
+  @media (min-width: 1200px) {
+    background-position: 100% 5%;
+  }
 
   .header, .footer {
     width: 100%;
