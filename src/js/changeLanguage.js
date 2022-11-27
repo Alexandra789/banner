@@ -1,4 +1,4 @@
-import {translations} from './translations'
+import {translations} from './localizations/translations.js';
 
 let arrayText = document.querySelectorAll('[data-translate]');
 
@@ -6,9 +6,9 @@ let language = 'en';
 const validLanguages = ['en', 'es', 'fr', 'ja', 'nl', 'ru', 'zh']
 
 function checkQueryParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
-    const osLanguage = navigator.language.slice(0,2);
+    const urlParams = new URL(window.location.href.replace('/#', ""));
+    const langParam = urlParams.searchParams.get("lang");
+    const osLanguage = navigator.language.slice(0, 2);
     if (langParam) {
         changeLanguage(langParam);
     } else {
@@ -25,14 +25,9 @@ function changeLanguage(newLanguage) {
 
 function translatePage(language) {
     arrayText.forEach(text => {
-        text.setAttribute('data-translate',language);
+        text.setAttribute('data-translate', language);
         text.innerHTML = translations[language][text.innerHTML];
     })
 }
 
 checkQueryParams();
-
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//     console.log(navigator.userAgent);
-// } else {
-// }
